@@ -10,15 +10,10 @@
 
     $nombre = " aLBeRTo gaRCia loPEz ";
 
-    //Hacemos cachitos de la cadena para luego poner la primera letra en mayusculas
-    $cachitos = explode(" ", $nombre);
+    $nombre_limpio = 
 
-    //minusculas de toda la cadena
-    $minusculas = sprintf(strtolower($nombre));
+    
 
-    $normalizado = sprintf();
-
-    printf("$minusculas");
 
     ?>
 </body>
