@@ -36,7 +36,7 @@
     printf("Primer apellido: $primer_apellido <br>");
     printf("Segundo apellido: $segundo_apellido <br>");
     printf("Iniciales: $inicial1.$inicial2.$inicial3 <br>");
-    printf("Nombre de usuario:". strtolower($primer_nombre).".".strtolower($primer_apellido));
+    printf("Nombre de usuario: ". strtolower($primer_nombre).".".strtolower($primer_apellido));
 
     
 
