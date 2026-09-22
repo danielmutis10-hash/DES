@@ -15,7 +15,7 @@
     $remplazo = str_replace(" ","-",$titulo_minusculas);
     $remplazo_tildes = str_replace("ó","o",$remplazo);
 
-    printf("http://$remplazo_tildes")
+    printf("http://$remplazo_tildes");
 
     ?>
 </body>
