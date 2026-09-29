@@ -12,14 +12,14 @@
         $inicio = 1;
         $fin = 100;
 
-
+        $i = 0;
         $cantidad = 0;
         $pares = 0;
         $impares = 0;
         $multiplos_tres = 0;
         $suma_total = 0;
 
-        for ($i = 0; $i < $fin; $i++) 
+        for ($i = $inicio; $i <= $fin; $i++) 
         {
             $cantidad ++;
             $suma_total += $i;
