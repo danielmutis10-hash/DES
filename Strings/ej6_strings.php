@@ -20,6 +20,25 @@
     $http = trim($cachitos[2]);
     $navegador = trim($cachitos[3]);
     $tipo = strtoupper(substr($cachititos[2],8,3));
+    
+    //identificar el http como 200 para saber que la peticion es correcta
+    if ($http == "200")
+    {
+        $correcta = "SI";
+    }else
+    {
+        $correcta = "NO";
+    }
+
+    printf("IP: $ip <br>");
+    printf("Método: $metodo <br>");
+    printf("Recurso: $recurso <br>");
+    printf("Código HTTP: $http <br>");
+    printf("Navegador: $navegador <br>");
+    echo "<br>";
+    printf("Tipo de recurso: $tipo <br>");
+    printf("Petición correcta: $correcta <br>");
+
 
 
 
