@@ -10,16 +10,31 @@
     <?php
 
         $num = 17;
-
+        $cont = 0;
         $i = 0;
 
-        for ( $i = 2; $i <= $num; $i++ )
+        echo "Número analizado: ", $num, "<br><br>";
+
+        for ( $i = 2; $i < $num; $i++ )
         {
             if ($num % $i == 0)
             {
-                $esPrimo = false;
-                break;
+                $cont ++;
+                echo"Probando divisor ", $i," &rarr; Es divisible <br>";
+            }else
+            {
+                echo "Probando divisor ", $i," &rarr; No divisible <br>";
             }
+        }
+
+        echo "<br>";
+        
+        if ($num > 1 && $cont == 0)
+        {
+            echo "El número", $num , "es primo";
+        }else
+        {
+            echo "El número ", $num , " no es primo";
         }
 
     ?>
