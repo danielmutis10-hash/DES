@@ -31,10 +31,10 @@
 
             }
 
-            echo "<br>";
+            echo "<br>";   
+            echo "</table>";
         }
 
-        echo "</table>";
     ?>
 
 </body>
