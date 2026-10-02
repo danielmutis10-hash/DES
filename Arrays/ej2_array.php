@@ -24,7 +24,7 @@
         $min_temperatura = 0;
         $media = 0;
 
-        echo "<table border='3' cellpadding='6' cellspacing='3'";
+        echo "<table border='1' cellpadding='6' cellspacing='3'";
         echo "<tr><th>Día</th><th>Temperatura</th><th>Diferencia día anterior</th></tr>";
 
         foreach ( $temperaturas as $aux => $temperatura)
