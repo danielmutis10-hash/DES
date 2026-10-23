@@ -1,30 +1,12 @@
 <?php
-    function sumar($a, $b){
-        return $a + $b;
-    }
-
-    function restar($a, $b){
-        return $a - $b;
-    }
-
-    function multiplicar($a, $b)
-    {
-        return $a * $b;
-    }
-
-    function dividir($a, $b){
-        if ($b == 0){
-            return U_ZERO_ERROR;
-        }
-        return $a / $b;
-    }
+    include "funciones.php";
 
     $resultado = "";
     $simbolo = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $op1 = floatval($_POST["op1"]);
-        $op2 = floatval($_POST["op2"]);
+        $op1 = floatval(test_input($_POST["op1"]));
+        $op2 = floatval(test_input($_POST["op2"]));
         $operacion = $_POST["operacion"];
 
         switch ($operacion){
@@ -42,7 +24,7 @@
                 break;
             case "division":
                 $resultado = dividir($op1, $op2);
-                $simbolo = "";
+                $simbolo = "/";
                 break;
         }
 
