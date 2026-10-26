@@ -33,9 +33,9 @@
             $suma += $valor;
 
             echo "<tr>";
-            echo "<td align='center> $indice </td>";
-            echo "<td align='center> $valor </td>";
-            echo "<td align='center> $suma </td>";
+            echo "<td align='center'> $indice </td>";
+            echo "<td align='center'> $valor </td>";
+            echo "<td align='center'> $suma </td>";
             echo "</tr>";
         }
 
