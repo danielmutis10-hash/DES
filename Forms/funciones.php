@@ -19,6 +19,13 @@
         return $a / $b;
     }
 
+    function binario($a){
+        if ($a !== ""){
+            return decbin(intval($a));
+        }
+        return "";
+    }
+
     function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
