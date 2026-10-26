@@ -26,6 +26,20 @@
         return "";
     }
 
+    function octal($a){
+        if ($a !== ""){
+            return decoct(intval($a));
+        }
+        return "";
+    }
+
+    function hexadecimal($a){
+        if ($a !== ""){
+            return dechex(strval($a));
+        }
+        return "";
+    }
+
     function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
