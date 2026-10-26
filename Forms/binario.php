@@ -5,7 +5,7 @@ $op = "";
 $binario = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $op = test_input($_POST["numero"] ?? "");
+    $op = test_input($_POST["op"] ?? "");
     
     $binario = binario($op);
 }
@@ -22,11 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="resultado">
         <strong>Resultado de la conversión</strong><br>
-        <h5>Número Decimal:</h5> 
-        <?php echo $op; ?>
-        <br>
-        <h5>Número Binario:</h5>
-        <?php echo $binario; ?>
+        <h5>Número Decimal: <?php echo $op; ?> </h5>
+        <h5>Número Binario: <?php echo $binario; ?></h5>
     </div>
     
 </body>
