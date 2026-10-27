@@ -1,0 +1,90 @@
+
+body{ 
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.formulario-box{ 
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 420px;
+}
+
+h2{ 
+    color: #1a365d;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.form-group{ 
+    margin-bottom: 15px;
+}
+
+label{ 
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #333;
+}
+
+input[type="text"], input[type="email"]{ 
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.obligatorio{ 
+    color: #e53e3e;
+    font-size: 11px;
+    float: right;
+    font-weight: normal;
+}
+
+.radio-group{ 
+    margin-top: 5px;
+}
+
+.radio-group label
+{ 
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.buttons{ 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]{
+    background-color: #2b6cb0;
+    color: white;
+    width: 60%;
+}
+
+button[type="reset"]{
+    background-color: #e2e8f0;
+    color: #333;
+    width: 35%;
+}

@@ -40,6 +40,13 @@
         return "";
     }
 
+    function guardar_datos($nombre, $apellido1, $apellido2, $email, $sexo){
+        
+        $registro = "$nombre;$apellido1;$apellido2;$email;$sexo\n";
+
+        file_put_contents("datos.txt",$registro, FILE_APPEND | LOCK_EX);
+    }
+
     function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
