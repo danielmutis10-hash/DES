@@ -44,7 +44,7 @@
         
         $registro = "$nombre;$apellido1;$apellido2;$email;$sexo\n";
 
-        file_put_contents("datos.txt",$registro, FILE_APPEND | LOCK_EX);
+        file_put_contents("datos.txt",$registro, FILE_APPEND);
     }
 
     function test_input($data) {
