@@ -1,3 +1,27 @@
+<?php
+include "funciones.php";
+
+   $baraja = crear_baraja();
+   $valores = convertir($baraja);
+   $valoresRemovidos = removerBaraja($valores);
+
+   $ganador = false;
+
+   while ($ganador != true) {
+        $indiceSacado = array_pop($valoresRemovidos);
+        $cartaActual = $baraja[$indiceSacado];
+        $puntosActuales = $valores[$indiceSacado];
+    }
+
+    
+
+
+
+
+   
+   
+
+?>
 <!doctype html>
 <html lang="es">
 <head>
