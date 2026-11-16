@@ -21,23 +21,27 @@ include "funciones.php";
     $partidaJugadores = array();
     $maxPuntuacion = 0;
     $ganador = 'Nadie';
+    $premio = 0;
 
     foreach($jugadores as $nombreJugador){
         $cartasJugador = array();
         $puntosTotales = 0.0;
 
         for ($i = 0; $i < $cartasPorJugador; $i++){
-            $indiceSacado = array_pop($valoresRemovidos);
-            $cartaActual = $baraja[$indiceSacado];
-            $puntosActuales = floatval($valores[$indiceSacado]);
+            $indiceSacado = array_pop($valoresRemovidos); //sacamos el ultimo valor
+            $cartaActual = $baraja[$indiceSacado]; /*Obtenemos el valor en cadena*/
+            $puntosActuales = floatval($valores[$indiceSacado]); //saca el valor en puntos
 
-            $cartasJugador[] = $cartaActual;
+            $cartasJugador[] = $cartaActual; /*guardamos la cadena de valores en 
+            un array para cada jugador*/
             $puntosTotales += $puntosActuales;
         }
 
+        //guardamos los resultados de cada uno de los jugadores en una partida
         $partidaJugadores[$nombreJugador] = [
-            "cartas" => $cartasJugador,
-            "puntos" => $puntosTotales
+            "cartas" => $cartasJugador, //guardamos las cartas de cada jugador
+            "puntos" => $puntosTotales, //Sus puntos totales
+            "premio" => $premio //aun no hecho 
         ];
 
         if ($puntosTotales <= 7.5 && $puntosTotales > $maxPuntuacion) {
@@ -65,9 +69,10 @@ include "funciones.php";
         <section class="panel">
             
             <?php if ($maxPuntuacion > 0): ?>
-                <div class="notice">El ganador es <strong><?= $ganador ?></strong> con un total de <strong><?= $maxPuntuacion ?> puntos</strong>! Apuesta en juego: <?= number_format($apuestaTotal, 2, ',', '.') ?> €</div>
+                <div class="notice-1">¡Tenemos un ganador!</div>
+                <div class="notice-2"><?= $ganador ?> ha ganado con <strong><?= $maxPuntuacion ?> puntos</strong> y recibe <?= number_format($apuestaTotal, 2, ',', '.') ?> €</div>
             <?php else: ?>
-                <div class="notice bad"> Todos los jugadores se han pasado de 7.5 puntos o no hay ganador válido en esta ronda.</div>
+                <div class="notice-bad"> No hay ganadores: todos han superado 7,5 puntos. El bote acumulado es <?= number_format($apuestaTotal, 2, ',', '.') ?> € </div>
             <?php endif; ?>
 
             <h2>Cartas y puntuaciones</h2>
@@ -77,14 +82,15 @@ include "funciones.php";
                         <tr>
                             <th>Jugador</th>
                             <th>Cartas obtenidas</th>
-                            <th>Puntuación total</th>
+                            <th>Puntuación</th>
+                            <th>Premio</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($partidaJugadores as $nombre => $datos){ 
                             $esGanador = ($nombre == $ganador);?>
                             <tr class="<?= $esGanador ? 'win' : '' ?>">
-                                <td><strong><?= $nombre ?></strong> <?= $esGanador ?></td>
+                                <td><strong><?= $nombre ?></td>
                                 <td>
                                     <div class="cards">
                                         <?php foreach ($datos['cartas'] as $carta){ ?>
@@ -95,10 +101,10 @@ include "funciones.php";
                                     </div>
                                 </td>
                                 <td>
-                                    <span class="total"><?= $datos['puntos'] ?> pts</span>
-                                    <?php if ($datos['puntos'] > 7.5){ ?>
-                                        <small style="color:red; display:block;">(¡Te pasaste!)</small>
-                                    <?php } ?>
+                                    <span class="total"><?= number_format($datos['puntos'] ,1 , '.') ?></span>
+                                </td>
+                                <td>
+                                    <span class="premio-jugador"><?= number_format($datos['premio'] ,2 , ',' , '.') ?></span>
                                 </td>
                             </tr>
                         <?php } ?>
