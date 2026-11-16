@@ -32,12 +32,12 @@ function removerBaraja($valores)
 function convertir($baraja) {
     $valores = array();
     for ($i = 0; $i < count($baraja); $i++) {
-        $posicionEnPalo = $i % 10;
+        $posicionEnCachos = $i % 10; //Dividimos en 10 el total de la baraja
 
-        if ($posicionEnPalo >= 7) {
+        if ($posicionEnCachos >= 7) {
             $valores[$i] = 0.5;
         } else {
-            $valores[$i] = $posicionEnPalo + 1;
+            $valores[$i] = $posicionEnCachos + 1;
         }
     }
     return $valores;

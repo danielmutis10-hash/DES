@@ -47,17 +47,6 @@
             color: #075c48
         }
 
-        .notice {
-            padding: 17px 20px;
-            border: 1px solid #a8dec1;
-            background: #eaf9f0;
-            color: #08633b;
-            border-radius: 10px;
-            font-size: 19px;
-            font-weight: bold;
-            margin-bottom: 16px
-        }
-
         .notice-bad {
             background: #fff6e9;
             border-color: #eed4a4;
@@ -106,10 +95,6 @@
             box-shadow: 0 2px 4px #0001;
             font-weight: bold;
             font-size: 17px
-        }
-
-        .red {
-            color: #d12c3b
         }
 
         .black {
