@@ -46,7 +46,11 @@ include "funciones.php";
 
         if ($puntosTotales <= 7.5 && $puntosTotales > $maxPuntuacion) {
             $maxPuntuacion = $puntosTotales;
-            $ganador = $nombreJugador;
+            $ganadores = array($nombreJugador);
+            
+            foreach($ganadores as $ganador){
+                $ganador = $nombreJugador;
+            }
         }
     }
 
