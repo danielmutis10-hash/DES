@@ -19,12 +19,12 @@ include "funciones.php";
     $valoresRemovidos = removerBaraja($valores);
 
     $partidaJugadores = array();
+    $cartasJugador = array();
     $maxPuntuacion = 0;
     $ganador = 'Nadie';
     $premio = 0;
 
     foreach($jugadores as $nombreJugador){
-        $cartasJugador = array();
         $puntosTotales = 0.0;
 
         for ($i = 0; $i < $cartasPorJugador; $i++){
