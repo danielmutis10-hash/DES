@@ -3,15 +3,15 @@ include "funciones.php";
 
     //Creacion de los jugadores
     $jugadores = [
-        $_POST['jugador1'] ?? 'Jugador1',
-        $_POST['jugador2'] ?? 'Jugador2',
-        $_POST['jugador3'] ?? 'Jugador3',
-        $_POST['jugador4'] ?? 'Jugador4'
+        test_input($_POST['jugador1'] ?? 'Jugador1'),
+        test_input($_POST['jugador2'] ?? 'Jugador2'),
+        test_input($_POST['jugador3'] ?? 'Jugador3'),
+        test_input($_POST['jugador4'] ?? 'Jugador4')
     ];
 
     //recogemos parametros que se piden en los campos html
-    $cartasPorJugador = intval($_POST['cartas'] ?? 4);
-    $apuestaTotal = floatval($_POST['apuesta'] ?? 300000);
+    $cartasPorJugador = intval(test_input($_POST['cartas'] ?? 4));
+    $apuestaTotal = floatval(test_input($_POST['apuesta'] ?? 300000));
 
     //creacion de la baraja y la removida de los valores del 7.5
     $baraja = crear_baraja();
